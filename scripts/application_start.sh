@@ -12,7 +12,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # loads nvm bash_completion (node is in path now)
 
 #install node modules
-npm install
+echo "=========== installing packages."
+npm install 
+
+echo " Installing PM2"
+npm install -g pm2
+
+
 
 #start our node app in the background
-node app.js > app.out.log 2> app.err.log < /dev/null & 
+echo "=========== starting the application with pm2."
+pm2 start app.js 
+pm2 restart all --update-env
