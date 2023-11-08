@@ -1,10 +1,12 @@
 #!/bin/bash
 
 #give permission for everything in the express-app directory
-sudo chmod -R 777 /home/ec2-user/express-app
+sudo chmod -R 777 /touchh
 
 #navigate into our working directory where we have all our github files
-cd /home/ec2-user/express-app
+cd /touchh
+
+
 
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"	
@@ -17,8 +19,6 @@ npm install
 
 echo " Installing PM2"
 npm install -g pm2
-
-
 
 #start our node app in the background
 echo "=========== starting the application with pm2."
