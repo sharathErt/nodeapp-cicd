@@ -5,7 +5,9 @@ const port = 3000;
 app.get('/', (req, res) => {
   res.send('<h1>Express Demo App</h1> <h4>Message: Success</h4> <p>Version 1.1</p>');
 })
-
+app.get('/v2', (req, res) => {
+  res.send('<h1>Express Demo App</h1> <h4>Message: Success</h4> <p>Version 2.0</p>');
+})
 app.get('/products', (req, res) => {
   res.send([
     {
