@@ -20,6 +20,6 @@ app.get('/products', (req, res) => {
 })
 
 app.listen(port, ()=> {
-  console.log(`Demo app is up and listening to port: ${port}`);
+  console.log(`server is started on: ${port}`);
 })
  
